@@ -11,7 +11,7 @@ Page({
   goodsid:'',
   onsale: true,
   img:'',
-    array: ['蔬菜', '肉类', '主食'],
+    array: ['蔬菜', '肉类', '主食1'],
     index:0,
   },
   onLoad(e) {
