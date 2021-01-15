@@ -1,0 +1,4 @@
+<!--page/component/openid/openid.wxml-->
+<view>openid是：{{openid}}</view>
+<view>昵称是：{{name}}<image src="{{myimage}}"></image></view>
+<button open-type="getUserInfo" bindgetuserinfo="onGetOpenid">获取openid</button>

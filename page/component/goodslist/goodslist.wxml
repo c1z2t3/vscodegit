@@ -1,0 +1,22 @@
+<view class="main">
+
+    <view >
+        <view class="cart-box" wx:if="{{goods}}">
+            <view class="cart-list" wx:for="{{goods}}" wx:key="{{item._id}}">
+                <navigator url="../addgoods/addgoods?id={{item._id}}"><image class="cart-thumb" src="{{item.img}}"></image></navigator>
+                <text class="cart-pro-name">{{item.name}}</text>
+                <text class="cart-pro-price">￥{{item.price}}</text>
+                <view class="cart-count-box">
+                    <text class="cart-count-num" wx:if="{{item.onsale}}">已上架</text>
+                    <text class="cart-count-num" wx:else>已下架{{item.onsale}}</text>
+                    
+                </view>
+                <text class="cart-del" bindtap="deleteList" data-index="{{index}}">×</text>
+            </view>
+        </view>
+   
+    <view wx:else>
+        <view class="cart-no-data" >商品是空的哦~</view>
+    </view>
+    </view>
+</view>

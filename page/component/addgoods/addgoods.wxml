@@ -1,0 +1,15 @@
+<view class="main">
+    <view class="form-box">
+        <form bindsubmit="savedata">
+            <input value="{{name}}" name="name" placeholder="商品名"/>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">类别：{{array[index]}}</picker>
+            <input type="number" name="price" value="{{price}}" placeholder="￥价格"/>
+             <view class="form-box"><icon wx:if="{{onsale}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+                <icon wx:else type="circle" class="cart-pro-select"  bindtap="selectList"/>是否上架</view>
+            <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="{{img}}"></image>
+            <button bindtap="uploadimg">上传图片</button>
+           
+            <button form-type="submit" >保存</button>
+        </form>
+    </view>
+</view>

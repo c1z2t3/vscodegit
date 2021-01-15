@@ -1,0 +1,23 @@
+/* page/component/addgoods/addgoods.wxss */
+@import '../../common/common.wxss';
+
+.form-box{
+    padding-left: 30rpx;
+}
+.form-box input{
+    height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    color: #999;
+}
+.form-box picker{
+    height: 65rpx;
+    border-bottom: 1rpx solid #ededed;
+    color: #999;
+    margin:30rpx 0rpx 25rpx 0;
+}
+.form-box .input-placeholder{
+    color: #aaa;
+}
+.form-box button{
+    margin:30rpx 30rpx 0 0;
+}

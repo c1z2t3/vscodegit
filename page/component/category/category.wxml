@@ -1,0 +1,22 @@
+<view class="main">
+    <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+    </view>
+    <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+            <view class="cart-box">
+            <view class="cart-list" wx:for="{{goods}}" wx:if="{{item.index==curIndex}}" wx:key="{{index}}">
+                <image class="cart-thumb" src="{{item.img}}"></image>
+                <text class="cart-pro-name">{{item.name}}</text>
+                <text class="cart-pro-price">￥{{item.price}}</text>
+                <view class="cart-count-box">
+                    <text class="cart-count-down" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                    <text class="cart-count-num">{{item.num}}</text>
+                    <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+                </view>
+                <image src="/image/cart2.png"  class="cart-del" bindtap="addToCart" ></image>
+            </view>
+        </view>     
+    </scroll-view>
+</view>
